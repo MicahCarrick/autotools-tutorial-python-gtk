@@ -6,9 +6,5 @@ sys.path.insert(1, '/usr/local/lib/python2.7/site-packages')
 from hello.application import Application
 
 if __name__ == "__main__":
-    app = Application(package_name="Hello World",
-                      package="hello-world", 
-                      version="0.1",
-                      datadir="/usr/local/share",
-                      appdatadir="/usr/local/share/hello-world")
+    app = Application(package="hello-world", version="0.2")
     app.run()

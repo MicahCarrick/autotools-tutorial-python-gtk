@@ -6,9 +6,5 @@ sys.path.insert(1, '@pythondir@')
 from hello.application import Application
 
 if __name__ == "__main__":
-    app = Application(package_name="@PACKAGE_NAME@",
-                      package="@PACKAGE@", 
-                      version="@VERSION@",
-                      datadir="@datadir@",
-                      appdatadir="@appdatadir@")
+    app = Application(package="@PACKAGE@", version="@VERSION@")
     app.run()

@@ -1,4 +1,3 @@
-import os
 from gi.repository import Gtk
 
 class Application(object):
@@ -10,11 +9,11 @@ class Application(object):
     def _create_main_window(self):
         self.window = Gtk.Window()
         self.window.connect("destroy", Gtk.main_quit)
-        self.window.set_title("%s v%s" % (self.package_name, self.version))
+        self.window.set_title("%s v%s" % (self.package, self.version))
+        self.window.set_default_size(300, 150)
+        self.window.set_border_width(20)
         self.window.set_icon_name(self.package)
-        path = os.path.join(self.appdatadir, "pixmaps", "hello_earth.png")
-        image = Gtk.Image.new_from_file(path)
-        self.window.add(image)
+        self.window.add(Gtk.Label("Hello World!"))
         
     def run(self):
         self.window.show_all()
