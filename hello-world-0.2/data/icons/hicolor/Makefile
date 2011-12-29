@@ -165,7 +165,7 @@ top_build_prefix = ../../../
 top_builddir = ../../..
 top_srcdir = ../../..
 SUBDIRS = 48x48 scalable
-gtk_update_icon_cache = gtk-update-icon-cache -f $(datadir)/icons/hicolor
+gtk_update_icon_cache = gtk-update-icon-cache -f -t $(datadir)/icons/hicolor
 all: all-recursive
 
 .SUFFIXES:
