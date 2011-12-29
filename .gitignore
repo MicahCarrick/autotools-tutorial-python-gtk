@@ -2,5 +2,6 @@ Makefile.in
 autom4te.cache
 config.log
 config.status
-hello-world
+*/src/hello-world
 *.pyc
+*.tar.gz
