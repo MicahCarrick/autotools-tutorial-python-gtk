@@ -13,6 +13,7 @@ AC_CONFIG_FILES([
     data/icons/hicolor/scalable/Makefile
     data/icons/hicolor/scalable/apps/Makefile
     src/Makefile 
-    src/hello/Makefile])
+    src/hello/Makefile
+])
 
 AC_OUTPUT
