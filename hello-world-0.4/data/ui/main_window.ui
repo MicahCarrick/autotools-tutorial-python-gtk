@@ -6,7 +6,6 @@
     <property name="border_width">20</property>
     <property name="default_width">300</property>
     <property name="default_height">150</property>
-    <property name="icon_name">hello-world</property>
     <signal name="destroy" handler="quit" swapped="no"/>
     <child>
       <object class="GtkLabel" id="label1">
