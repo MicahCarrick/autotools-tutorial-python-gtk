@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Exec=hello-world
+Name=Hello World
+Categories=Utility;GTK
+Icon=hello-world
