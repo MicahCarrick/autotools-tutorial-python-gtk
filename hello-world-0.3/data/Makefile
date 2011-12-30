@@ -192,7 +192,7 @@ top_srcdir = ..
 SUBDIRS = icons
 desktopdir = $(datadir)/applications
 desktop_DATA = hello-world.desktop
-DESKTOP_UPDATE = update-desktop-database $(datadir)/applications || :
+UPDATE_DESKTOP = update-desktop-database $(datadir)/applications || :
 all: all-recursive
 
 .SUFFIXES:
@@ -563,9 +563,9 @@ uninstall-am: uninstall-desktopDATA
 
 
 install-data-hook: 
-	$(DESKTOP_UPDATE)
+	$(UPDATE_DESKTOP)
 uninstall-hook: 
-	$(DESKTOP_UPDATE)
+	$(UPDATE_DESKTOP)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

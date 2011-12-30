@@ -165,7 +165,7 @@ top_build_prefix = ../../../
 top_builddir = ../../..
 top_srcdir = ../../..
 SUBDIRS = 48x48 scalable
-gtk_update_icon_cache = gtk-update-icon-cache -f -t $(datadir)/icons/hicolor
+UPDATE_ICON_CACHE = gtk-update-icon-cache -f -t $(datadir)/icons/hicolor || :
 all: all-recursive
 
 .SUFFIXES:
@@ -510,16 +510,10 @@ uninstall-am:
 	uninstall-hook
 
 
-install-data-hook: update-icon-cache
-uninstall-hook: update-icon-cache
-update-icon-cache:
-	@-if test -z "$(DESTDIR)"; then \
-		echo "Updating Gtk icon cache."; \
-		$(gtk_update_icon_cache); \
-	else \
-		echo "*** Icon cache not updated.  After (un)install, run this:"; \
-		echo "***   $(gtk_update_icon_cache)"; \
-	fi
+install-data-hook: 
+	$(UPDATE_ICON_CACHE)
+uninstall-hook: 
+	$(UPDATE_ICON_CACHE)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
