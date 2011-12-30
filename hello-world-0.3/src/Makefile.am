@@ -5,10 +5,7 @@ CLEANFILES = $(bin_SCRIPTS)
 EXTRA_DIST = hello-world.in
 
 do_substitution = sed -e 's,[@]pythondir[@],$(pythondir),g' \
-	-e 's,[@]datadir[@],$(datadir),g' \
-	-e 's,[@]appdatadir[@],$(datadir)/$(PACKAGE),g' \
 	-e 's,[@]PACKAGE[@],$(PACKAGE),g' \
-	-e 's,[@]PACKAGE_NAME[@],$(PACKAGE_NAME),g' \
 	-e 's,[@]VERSION[@],$(VERSION),g' 
 
 hello-world: hello-world.in Makefile
